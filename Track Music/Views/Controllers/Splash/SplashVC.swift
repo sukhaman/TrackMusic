@@ -1,15 +1,15 @@
-//
-//  SplashVC.swift
-//  Track Music
-//
-//  Created by Sukhaman Singh on 3/11/23.
-//
+
 
 import UIKit
 
 class SplashVC: UIViewController {
-    
+    var lblTitle = TMLabel(textAlignment: .center, fontSize: 16, weight: .bold)
+    var btnCreateAccount = TMButton(backgroundColor: .systemMint, title: "Create an account")
+    var navigationDelegate: SignupNavigationDelegate?
     override func viewDidLoad() {
-        self.view.backgroundColor = .red
+        navigationDelegate = self
+        self.configureViewController()
     }
+    
+    
 }
